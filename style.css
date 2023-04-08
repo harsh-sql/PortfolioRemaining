@@ -1,105 +1,202 @@
 /* Reset default margin and padding */
-body, h1, h2, p, ul, li, form {
-    margin: 0;
-    padding: 0;
+body, h1, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+  font-family: "Monospace", monospace;
+}
+
+#first-section {
+  text-align: left; /* Align text to left */
+}
+
+#first-section .btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border:#fff;
+  cursor: pointer;
+  text-decoration:none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+#first-section .btn:hover {
+  background-color: #e0d400; /* Update hover background color */
+}
+
+
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2ac400;
+}
+
+p {
+  color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color:  #72e400;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px; /* Add margin-top for spacing between paragraph and button */
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #72e400; /* Update color to #72e400 for green */
+  position: relative;
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent wrapping */
+  animation: typing 3s steps(40) infinite;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: cornflowerblue;
+  animation: typing 1s infinite;
+}
+
+@keyframes typing {
+  0% {
+      width: 0;
   }
-  
-  /* Set font styles */
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+  50% {
+      width: 100%;
   }
-  
-  /* Header styles */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+  100% {
+      width: 0;
   }
-  
-  h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav a:hover {
-    color: #ccc;
-  }
-  
-  /* Main section styles */
-  section {
-    padding: 40px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  /* Contact form styles */
-  form {
-    margin-top: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #666;
-  }
-  
-  /* Social media section styles */
-  #social-media {
-    background-color: #f7f7f7;
-    padding: 20px;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
+}
+
+
+/* Set font styles */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000000;
+}
+
+/* Header styles */
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav ul {
+  align-items: flex-end; /* Update align-items to flex-start for left alignment */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display:inline-flex; /* Update display to block for stacking nav items vertically */
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #1eff00;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #e0d400;
+}
+
+/* Main section styles */
+section {
+  padding: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #fff;
+}
+
+/* Contact form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #000000;
+}
+
+/* Social media section styles */
+#social-media {
+  background-color: #333;
+  padding: 20px;
+}
+
+#social-media a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#social-media a:hover {
+  color: #e0d400;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
